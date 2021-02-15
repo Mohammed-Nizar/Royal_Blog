@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <tr>
+    <th>key</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Rent</th>
+  </tr>
+   <% @bikes.each do |b| %>
+   <td><%= b.primary_key %> </td>
+   <td><%= b.id %> </td>
+   <td><%= b.name %> </td>
+   <td><%= b.rent %> </td>
+   <td><%= link_to "delete" delete_data_path (b.id), :class=>"inbox-sf-add-btn tip" %></td>
+    </tr>
+  <% end %>
+</table>

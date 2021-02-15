@@ -1,0 +1,47 @@
+
+  <div class="section loginForm"></div>
+  <main>
+    <center>
+      <div class="container">
+      <div class="section"></div>
+
+      <h5 class="indigo-text">Please, login into your account</h5>
+      <div class="section"></div>
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <%= form_with url: "/login", class:" col s12" , method: :post do |f| %>
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>  
+                <%= f.email_field :address , class:"input-field col s12" %>
+                <%= f.label :address, "e-mail" %>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <%= f.password_field :password , class:"input-field col s12"  %>
+                <%= f.label :password, "Password" %>
+              </div>
+              <label style='float: right;'>
+								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+							</label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <%= f.submit "Submit" , class: "col s12 btn btn-large waves-effect indigo"  %>
+              </div>
+            </center>
+          <% end %>
+        </div>
+      </div>
+      <a href="#!">Create account</a>
+    <div class="section"></div>
+    <div class="section"></div>
+  </main>

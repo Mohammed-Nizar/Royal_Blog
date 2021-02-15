@@ -1,0 +1,50 @@
+
+  <div class="section loginForm"></div>
+  <main>
+    <center>
+      <div class="container">
+      <div class="section"></div>
+
+      <h5 class="indigo-text">Add Product Details,</h5>
+      <div class="section"></div>
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+          <%= form_with url: "/add_Item", class:" col s12" , method: :post do |f| %>
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>  
+                <%= f.number_field :bikeId, size: "70x5" %>
+                <%= f.label :bikeId, "Key" %>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <%= f.text_field :name , class:"input-field col s12"  %>
+                <%= f.label :name, "Name" %>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='input-field col s12'>  
+                <%= f.number_field :price, size: "70x5" %>
+                <%= f.label :price, "Price" %>
+              </div>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <%= f.submit "Submit" , class: "col s12 btn btn-large waves-effect indigo"  %>
+              </div>
+            </center>
+          <% end %>
+        </div>
+      </div>
+      <a><%= link_to "View List" , view_list_path , class:" nav-link" %></a>
+    <div class="section"></div>
+    <div class="section"></div>
+  </main>
